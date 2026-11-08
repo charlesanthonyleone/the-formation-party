@@ -85,4 +85,13 @@
     };
     window.addEventListener('scroll', drift, { passive: true });
   }
+
+  document.querySelectorAll('.hero-art, .page-hero').forEach((host, index) => {
+    if (host.querySelector('.night-sky')) return;
+    const sky = document.createElement('div');
+    sky.className = 'night-sky';
+    sky.setAttribute('aria-hidden', 'true');
+    sky.innerHTML = `<svg class="constellation" viewBox="0 0 240 140"><polyline points="18,96 52,70 88,84 126,46 168,62 206,28"/><circle cx="18" cy="96" r="1.4"/><circle cx="52" cy="70" r="1.2"/><circle cx="88" cy="84" r="1.6"/><circle cx="126" cy="46" r="1.3"/><circle cx="168" cy="62" r="1.1"/><circle cx="206" cy="28" r="1.7"/></svg><i class="shooting-star" style="top:${14 + (index % 3) * 7}%;left:${6 + (index % 4) * 4}%;animation-delay:${index * 1.6}s"></i>`;
+    host.appendChild(sky);
+  });
 })();
