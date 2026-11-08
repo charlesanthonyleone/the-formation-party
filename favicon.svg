@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#c43c25"/><g fill="#fffaf2"><path d="M12 12h40v10H12zM12 27h30v10H12zM12 42h10v10H12z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="The Formation Party">
+  <circle cx="100" cy="100" r="100" fill="#C41E3A"/>
+  <circle cx="100" cy="100" r="88" fill="#F6F3EC"/>
+  <circle cx="100" cy="100" r="82" fill="#0A2342"/>
+  <polygon fill="#F6F3EC" points="100.00,34.00 105.53,50.40 122.83,50.58 108.94,60.90 114.11,77.42 100.00,67.40 85.89,77.42 91.06,60.90 77.17,50.58 94.47,50.40"/>
+  <rect x="52" y="94" width="96" height="16" fill="#F6F3EC"/>
+  <rect x="52" y="118" width="72" height="16" fill="#F6F3EC"/>
+  <rect x="52" y="142" width="48" height="16" fill="#F6F3EC"/>
+</svg>
