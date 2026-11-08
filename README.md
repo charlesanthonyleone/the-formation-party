@@ -20,7 +20,7 @@ From this directory, run `python3 -m http.server 8080 --bind 127.0.0.1`, then op
 ## Content and behavior
 All 25 chapter bodies are preserved from ../PARTY-PHILOSOPHY.md. The preamble identifies the intellectual inheritance without displaying its source brand outside the footer. Chapter numbers and anchors are stable. No analytics, forms, third-party scripts, tracking, payments, fabricated contacts, or membership counts. The founding worksheet is a local text download, not enrollment.
 
-Shared styles.css and site.js provide responsive layout and progressive mobile navigation. Without JavaScript all navigation remains visible. No external font or image requests. Keyboard skip link, visible focus, reduced-motion support, print styles, and meaningful landmarks included.
+Shared styles.css, site.js, and the self-hosted fonts in fonts/ provide the interface, responsive layout, and progressive mobile navigation. Without JavaScript all navigation remains visible. No third-party font or script requests. Keyboard skip link, visible focus, reduced-motion support, print styles, and meaningful landmarks included.
 
 ## Publication prerequisites
 Membership intake and verified organizing contacts are deliberately absent until established. Obtain authorization and verify organizational/legal status before public deployment. Do not imply registration or ballot access. The footer does not claim either. The other party sites were not used as templates and were not modified.
