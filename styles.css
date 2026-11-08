@@ -1,6 +1,6 @@
-/* The Formation Party — ceremonial interface.
+/* The Formation Party — living red, white, and blue night.
    Navy #0A2342, crimson #C41E3A, cream #f6f3ec.
-   Motion is cinematic by default and still under prefers-reduced-motion. */
+   The sky is a canvas behind the page. Motion rests under prefers-reduced-motion. */
 
 @font-face {
   font-family: Fraunces;
@@ -1050,4 +1050,216 @@ p { text-wrap: pretty; }
   .chapter { break-inside: avoid; }
   .chapter + .chapter { break-before: page; }
   a { color: black; text-decoration: underline; }
+}
+
+/* Living night — handwritten override of the ceremonial card chrome */
+html {
+  overflow-x: clip;
+  background: #050d1c;
+}
+body {
+  background: transparent;
+}
+#main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+.party-sky {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: 0;
+}
+.site-header {
+  background: rgba(7, 24, 46, 0.34);
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+}
+.site-header.is-scrolled {
+  background: rgba(7, 24, 46, 0.78);
+  box-shadow: 0 10px 28px rgba(7, 24, 46, 0.22);
+}
+body.nav-open .site-header {
+  background: rgba(7, 24, 46, 0.94);
+}
+.header-rule {
+  height: 2px;
+  background: var(--accent);
+}
+.hero,
+.page-hero,
+.part-hero,
+.join-hero,
+.hero-art,
+.statement-band {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none;
+  color: var(--paper);
+}
+.hero {
+  min-height: calc(100svh - var(--header) - 2px);
+}
+.hero-copy,
+.hero-deck,
+.hero .eyebrow,
+.hero .text-link {
+  color: var(--paper);
+}
+.hero-deck {
+  color: rgba(246, 243, 236, 0.9);
+}
+.hero .button-dark {
+  background: var(--accent);
+  color: var(--paper);
+}
+.hero .button-dark:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+.hero-art {
+  padding: 48px var(--inset) 48px 8%;
+  border: 0;
+}
+.hero-seal,
+.identity-seal,
+.part-hero::before {
+  filter: drop-shadow(0 0 22px rgba(246, 243, 236, 0.28)) drop-shadow(0 16px 36px rgba(196, 30, 58, 0.32));
+}
+.orbit,
+.night-sky,
+.constellation,
+.shooting-star {
+  display: none !important;
+}
+.principle-strip {
+  background: transparent;
+  border-top: 1px solid rgba(246, 243, 236, 0.14);
+  color: var(--paper);
+}
+.section,
+.chapter-layout,
+.part-pagination {
+  background: var(--paper);
+  box-shadow: -100vw 0 0 var(--paper), 100vw 0 0 var(--paper);
+}
+.section.paper,
+.manuscript,
+.paper {
+  background: var(--paper);
+}
+.three-columns {
+  gap: 48px 56px;
+}
+.three-columns article {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 18px 0 0;
+  border-top: 2px solid var(--accent);
+  min-height: 0;
+}
+.three-columns article:hover {
+  box-shadow: none;
+}
+.part-grid {
+  gap: 0 48px;
+}
+.part-card {
+  min-height: 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 28px 4px 32px 0;
+  overflow: visible;
+  transition: color 0.2s ease;
+}
+.part-card::before {
+  display: none;
+}
+.part-card:hover,
+.part-card:last-child:hover {
+  background: transparent;
+  background-color: transparent;
+  color: inherit;
+  transform: none;
+}
+.part-card:hover h3 {
+  color: var(--accent);
+}
+.part-card:hover .eyebrow {
+  color: var(--accent);
+}
+.part-card:hover .card-meta {
+  color: var(--muted);
+}
+.part-card:last-child {
+  background-image: none;
+  padding-right: 4px;
+}
+.founding-call {
+  background:
+    linear-gradient(180deg, rgba(196, 30, 58, 0.08), rgba(196, 30, 58, 0.38) 46%, rgba(196, 30, 58, 0.16)) !important;
+  box-shadow: none;
+  color: var(--paper);
+}
+.site-footer {
+  background: transparent !important;
+  background-image: none !important;
+}
+.site-footer::before {
+  height: 2px;
+  background: var(--accent);
+}
+@media (max-width: 860px) {
+  .hero-art {
+    min-height: 0;
+    padding: 12px var(--inset) 56px;
+    border: 0;
+  }
+}
+@media print {
+  .party-sky { display: none !important; }
+}
+.hero h1,
+.page-hero h1,
+.part-hero h1 {
+  color: #fffefa;
+}
+.hero-copy > *,
+.page-hero > .eyebrow,
+.page-hero > h1,
+.page-hero > .standfirst,
+.part-hero > .breadcrumb,
+.part-hero > .eyebrow,
+.part-hero > h1,
+.part-hero > .standfirst,
+.hero-seal,
+.identity-seal,
+.part-hero::before {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+body::before {
+  opacity: 0.02;
+}
+@media (max-width: 860px) {
+  .hero {
+    min-height: 0;
+    align-content: start;
+  }
+  .hero-copy {
+    justify-content: flex-start;
+    padding-top: 28px;
+    padding-bottom: 8px;
+  }
+  .hero-art {
+    padding-top: 8px;
+    padding-bottom: 40px;
+  }
 }
